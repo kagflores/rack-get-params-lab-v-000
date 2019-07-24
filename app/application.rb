@@ -23,7 +23,12 @@ class Application
         resp.write "Your cart is empty"
       end
     elsif req.path.match(/add/)
-
+      if #item exists in item list is true
+        #add to cart?
+        resp.write "added #{item}"
+      else
+        resp.write "We don't have that item"
+      end
     else
       resp.write "Path Not Found"
     end
